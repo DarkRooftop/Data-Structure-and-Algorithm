@@ -7,4 +7,4 @@
 
 void CreatArray(std::vector<ElementType>& array);
 void InsertSort(std::vector<ElementType>& array);
-void EmergeSort(std::vector<ElementType>& array);
+void MyEmergeSort(std::vector<ElementType>& array, int L, int R);

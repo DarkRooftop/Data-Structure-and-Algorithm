@@ -15,8 +15,8 @@ int main() {
 	CreatArray(array);
 	//cout << "ÇëÊäÈëÁíÒ»´®Êı×Ö" << endl;
 	//CreatArray(array2);
-	InsertSort(array);
-	//EmergeSort(array);
+	//InsertSort(array);
+	MyEmergeSort(array,0,7);
 	for (int i : array)
 		cout << i << " ";
 	/*

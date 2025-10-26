@@ -34,6 +34,29 @@ void InsertSort(vector<ElementType>& array) {
 		j = i;
 	}
 }
-void EmergeSort(vector<ElementType>& array) {
+void MyEmergeSort(vector<ElementType>& array, int L, int R) {
+	
+	if (R == L)
+		return;
+	
+	int M = L + (R - L) / 2;
+	
+	MyEmergeSort(array, L, M);
+	MyEmergeSort(array, M+1, R);
+
+	vector<ElementType> temp;
+	int i = L, j = M + 1;
+	while (i <= M && j <= R) 
+		temp.push_back(array[i] < array[j] ? array[i++] : array[j++]);
+	while (i <= M) 
+		temp.push_back(array[i++]);
+	while (j <= R) 
+		temp.push_back(array[j++]);
+
+	//¿½±´Âð¾ÓÈ»ÊÇ
+	for (int k = 0; k < temp.size(); k++)
+		array[L + k] = temp[k];
+	
+	
 	return;
 }
