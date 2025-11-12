@@ -7,6 +7,7 @@
 #define MaxTree 10
 #define ElementType int
 
+//Normal Tree
 typedef struct TreeNode* BinTree;
 typedef BinTree Position;
 struct TreeNode {
@@ -14,6 +15,13 @@ struct TreeNode {
 	BinTree Left;
 	BinTree Right;
 	TreeNode(ElementType val) : Data(val), Left(nullptr), Right(nullptr) {}
+};
+
+//Huffman Tree
+typedef struct HTreeNode* HuffmanTree;
+struct HTreeNode {
+	int Weight;
+	HuffmanTree Left, Right;
 };
 
 Position Find(ElementType X, BinTree BST);
@@ -32,3 +40,6 @@ std::vector<ElementType> CengTraversal(TreeNode* root);
 void PrintBT(std::vector<ElementType> vec);
 int IsEmptyBT(BinTree bt);
 int TreeHeight(const BinTree bt);
+
+//Huff Tree
+//HuffmanTree Huffman(MinHeap H);

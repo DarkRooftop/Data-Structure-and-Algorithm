@@ -224,3 +224,25 @@ int TreeHeight(const BinTree bt) {
 	else
 		return 0;
 }
+
+//这是一个霍夫曼树
+//HuffmanTree Huffman(MinHeap H) {
+//	//
+//	int i; HuffmanTree T;
+//	//
+//	BuildMinHeap(H);
+//	for (i = 1; i < H->Size; i++) {//
+//		//
+//		T = malloc(sizeof(struct HTreeNode));
+//		//
+//		T->Left = DeleteMin(H);
+//		//
+//		T->Right = DeleteMin(H);
+//		//
+//		T->Weight = T->Left->Weight + T->Right->Weight;
+//		//
+//		Insert(H, T);
+//	}
+//	T = DeleteMin(H);
+//	return T;
+//}

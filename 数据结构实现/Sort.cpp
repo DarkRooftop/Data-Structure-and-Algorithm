@@ -34,15 +34,27 @@ void InsertSort(vector<ElementType>& array) {
 		j = i;
 	}
 }
-void MyEmergeSort(vector<ElementType>& array, int L, int R) {
+
+void MergeSort(vector<ElementType>& array) {
+	int len;
+	cout << "这个数组多长呀，可以告诉我吗？" << endl;
+	cin >> len;
+	if (len != array.size()) {
+		cout << "敢骗我？不给你排了，再见！" << endl;
+	}
+	else {
+		MergeSort(array, 0, array.size() - 1);
+	}
+}
+void MergeSort(vector<ElementType>& array, int L, int R) {
 	
 	if (R == L)
 		return;
 	
 	int M = L + (R - L) / 2;
 	
-	MyEmergeSort(array, L, M);
-	MyEmergeSort(array, M+1, R);
+	MergeSort(array, L, M);
+	MergeSort(array, M+1, R);
 
 	vector<ElementType> temp;
 	int i = L, j = M + 1;
@@ -59,4 +71,20 @@ void MyEmergeSort(vector<ElementType>& array, int L, int R) {
 	
 	
 	return;
+}
+
+void ChoSort(vector<ElementType>& array) {
+	for (int i = 0; i < array.size() - 1; i++) {
+		int key = array[i];
+		int t = i;
+		for (int j = i + 1; j < array.size(); j++) {
+			if (key > array[j]) {
+				t = j;
+				key = array[j];
+			}
+		}
+		int temp = array[t];
+		array[t] = array[i];
+		array[i] = temp;
+	}
 }

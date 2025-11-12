@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Heap.cpp" />
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Sort.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Heap.h" />
+    <ClInclude Include="Matrix.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>

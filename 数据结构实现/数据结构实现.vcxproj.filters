@@ -24,12 +24,24 @@
     <ClCompile Include="Sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
