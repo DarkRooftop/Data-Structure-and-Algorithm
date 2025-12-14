@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="AVL.cpp" />
     <ClCompile Include="Heap.cpp" />
+    <ClCompile Include="LGraph.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="MGraph.cpp" />
     <ClCompile Include="Sort.cpp" />
@@ -138,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="AVL.h" />
     <ClInclude Include="Heap.h" />
+    <ClInclude Include="LGraph.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MGraph.h" />
     <ClInclude Include="Sort.h" />
