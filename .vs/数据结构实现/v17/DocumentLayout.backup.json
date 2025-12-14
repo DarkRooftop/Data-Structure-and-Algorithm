@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{16339763-761B-439C-A7F0-451952E69C73}|\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0.vcxproj|C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{16339763-761B-439C-A7F0-451952E69C73}|\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0.vcxproj|solutionrelative:\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16339763-761B-439C-A7F0-451952E69C73}|\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0.vcxproj|C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{16339763-761B-439C-A7F0-451952E69C73}|\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0.vcxproj|solutionrelative:\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16339763-761B-439C-A7F0-451952E69C73}|\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0.vcxproj|C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{16339763-761B-439C-A7F0-451952E69C73}|\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0.vcxproj|solutionrelative:\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Heap.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.h",
+              "RelativeDocumentMoniker": "\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.h",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.h",
+              "RelativeToolTip": "\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-14T07:15:24.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Heap.cpp",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.cpp",
+              "RelativeDocumentMoniker": "\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.cpp",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.cpp",
+              "RelativeToolTip": "\u6570\u636E\u7ED3\u6784\u5B9E\u73B0\\Heap.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-14T07:14:55.805Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"

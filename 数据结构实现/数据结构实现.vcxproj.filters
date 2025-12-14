@@ -33,6 +33,9 @@
     <ClCompile Include="AVL.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tree.h">
@@ -48,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AVL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MGraph.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
