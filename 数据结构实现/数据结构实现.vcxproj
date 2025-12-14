@@ -134,6 +134,7 @@
     <ClCompile Include="MGraph.cpp" />
     <ClCompile Include="Sort.cpp" />
     <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="图的DFS（例子）.cpp" />
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
