@@ -5,57 +5,133 @@
 #include"Tree.h"
 #include"Sort.h"
 #include"Matrix.h"
-
+#include"AVL.h"
 using namespace std;
 
 
-int main() {
-	class Matrix_coculate mc;
-	class Matrix_devided md;
-
-	Matrix M1 = mc.CreatMatrix();
-	Matrix M2 = mc.CreatMatrix();
-
-	Matrix A1 = md.DevideMatrix(M1, 1);
-	Matrix A2 = md.DevideMatrix(M1, 2);
-	Matrix A3 = md.DevideMatrix(M1, 3);
-	Matrix A4 = md.DevideMatrix(M1, 4);
-	Matrix B1 = md.DevideMatrix(M2, 1);
-	Matrix B2 = md.DevideMatrix(M2, 2);
-	Matrix B3 = md.DevideMatrix(M2, 3);
-	Matrix B4 = md.DevideMatrix(M2, 4);
-
-	Matrix S1 = mc.CountMatrix(B2,B4,'-');
-	Matrix S2 = mc.CountMatrix(A1,A2,'+');
-	Matrix S3 = mc.CountMatrix(A3,A4,'+');
-	Matrix S4 = mc.CountMatrix(B3,B1,'-');
-	Matrix S5 = mc.CountMatrix(A1,A4,'+');
-	Matrix S6 = mc.CountMatrix(B1,B4,'+');
-	Matrix S7 = mc.CountMatrix(A2,A4,'-');
-	Matrix S8 = mc.CountMatrix(B3,B4,'+');
-	Matrix S9 = mc.CountMatrix(A1,A3,'-');
-	Matrix S10 = mc.CountMatrix(B1,B2,'+');
-	
-	Matrix P1 = mc.MultiplyMatrix(A1, S1);
-	Matrix P2 = mc.MultiplyMatrix(S2, B4);
-	Matrix P3 = mc.MultiplyMatrix(S3, B1);
-	Matrix P4 = mc.MultiplyMatrix(A4, S4);
-	Matrix P5 = mc.MultiplyMatrix(S5, S6);
-	Matrix P6 = mc.MultiplyMatrix(S7, S8);
-	Matrix P7 = mc.MultiplyMatrix(S9, S10);
-
-	Matrix Ct1= mc.CountMatrix(P5, P4, '+'); Matrix Ct2 = mc.CountMatrix(P6, P2, '-');
-	Matrix C1 = mc.CountMatrix(Ct1, Ct2, '+');
-	Matrix C2 = mc.CountMatrix(P1, P2, '+');
-	Matrix C3 = mc.CountMatrix(P3, P4, '+');
-	Ct1 = mc.CountMatrix(P5, P1, '+'); Ct2 = mc.CountMatrix(P7, P3, '+');
-	Matrix C4 = mc.CountMatrix(Ct1, Ct2, '-');
-	mc.PrintMatrix(C1); mc.PrintMatrix(C3);
-	cout << endl;
-	mc.PrintMatrix(C2); mc.PrintMatrix(C4);
-	
-	return 0;
+#include<iostream>
+#include<vector>
+#include<algorithm>
+struct Poly {
+    int data;
+    int zhishu;
+};
+vector<Poly> GetPoly() {
+    vector<Poly> arr;
+    int N;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        int a, b;
+        cin >> a >> b;
+        Poly temp;
+        temp.data = a;
+        temp.zhishu = b;
+		arr.push_back(temp);
+    }
+    return arr;
 }
+vector<Poly> AddPoly(vector<Poly> poly1, vector<Poly> poly2) {
+    vector<Poly> ans;
+    int i = 0, j = 0;
+    while (i < poly1.size() && j < poly2.size()) {
+        if (poly1[i].zhishu == poly2[j].zhishu) {
+            Poly poly;
+            poly.data = poly1[i].data + poly2[j].data;
+            poly.zhishu = poly1[i].zhishu;
+            ans.push_back(poly); i++; j++;
+        }
+        else if (poly1[i].zhishu > poly2[j].zhishu) {
+            Poly poly;
+            poly.data = poly1[i].data;
+            poly.zhishu = poly1[i].zhishu;
+            ans.push_back(poly); i++;
+        }
+        else {
+            Poly poly;
+            poly.data = poly2[j].data;
+            poly.zhishu = poly2[j].zhishu;
+            ans.push_back(poly); j++;
+        }
+    }
+    while (i < poly1.size()) {
+        Poly poly;
+        poly.data = poly1[i].data;
+        poly.zhishu = poly1[i].zhishu;
+        ans.push_back(poly); i++;
+    }
+    while (j < poly2.size()) {
+        Poly poly;
+        poly.data = poly2[j].data;
+        poly.zhishu = poly2[j].zhishu;
+        ans.push_back(poly); j++;
+    }
+    return ans;
+}
+
+vector<Poly> MutiPoly(vector<Poly> poly1, vector<Poly> poly2) {
+    vector<Poly> ans;
+    
+}
+
+int main() {
+    vector<Poly> poly1, poly2, poly3,poly4;
+    poly1 = GetPoly();
+    poly2 = GetPoly();
+    poly3 = AddPoly(poly1, poly2);
+    for (int i = 0; i < poly3.size(); i++) {
+        cout << poly3[i].data <<" "<< poly3[i].zhishu<<" ";
+    }
+    poly4 = MutiPoly(poly1, poly2);
+    return 0;
+}
+
+//int main() {
+//	class Matrix_coculate mc;
+//	class Matrix_devided md;
+//
+//	Matrix M1 = mc.CreatMatrix();
+//	Matrix M2 = mc.CreatMatrix();
+//
+//	Matrix A1 = md.DevideMatrix(M1, 1);
+//	Matrix A2 = md.DevideMatrix(M1, 2);
+//	Matrix A3 = md.DevideMatrix(M1, 3);
+//	Matrix A4 = md.DevideMatrix(M1, 4);
+//	Matrix B1 = md.DevideMatrix(M2, 1);
+//	Matrix B2 = md.DevideMatrix(M2, 2);
+//	Matrix B3 = md.DevideMatrix(M2, 3);
+//	Matrix B4 = md.DevideMatrix(M2, 4);
+//
+//	Matrix S1 = mc.CountMatrix(B2,B4,'-');
+//	Matrix S2 = mc.CountMatrix(A1,A2,'+');
+//	Matrix S3 = mc.CountMatrix(A3,A4,'+');
+//	Matrix S4 = mc.CountMatrix(B3,B1,'-');
+//	Matrix S5 = mc.CountMatrix(A1,A4,'+');
+//	Matrix S6 = mc.CountMatrix(B1,B4,'+');
+//	Matrix S7 = mc.CountMatrix(A2,A4,'-');
+//	Matrix S8 = mc.CountMatrix(B3,B4,'+');
+//	Matrix S9 = mc.CountMatrix(A1,A3,'-');
+//	Matrix S10 = mc.CountMatrix(B1,B2,'+');
+//	
+//	Matrix P1 = mc.MultiplyMatrix(A1, S1);
+//	Matrix P2 = mc.MultiplyMatrix(S2, B4);
+//	Matrix P3 = mc.MultiplyMatrix(S3, B1);
+//	Matrix P4 = mc.MultiplyMatrix(A4, S4);
+//	Matrix P5 = mc.MultiplyMatrix(S5, S6);
+//	Matrix P6 = mc.MultiplyMatrix(S7, S8);
+//	Matrix P7 = mc.MultiplyMatrix(S9, S10);
+//
+//	Matrix Ct1= mc.CountMatrix(P5, P4, '+'); Matrix Ct2 = mc.CountMatrix(P6, P2, '-');
+//	Matrix C1 = mc.CountMatrix(Ct1, Ct2, '+');
+//	Matrix C2 = mc.CountMatrix(P1, P2, '+');
+//	Matrix C3 = mc.CountMatrix(P3, P4, '+');
+//	Ct1 = mc.CountMatrix(P5, P1, '+'); Ct2 = mc.CountMatrix(P7, P3, '+');
+//	Matrix C4 = mc.CountMatrix(Ct1, Ct2, '-');
+//	mc.PrintMatrix(C1); mc.PrintMatrix(C3);
+//	cout << endl;
+//	mc.PrintMatrix(C2); mc.PrintMatrix(C4);
+//	
+//	return 0;
+//}
 	
 /*vector<int> array,array2;
 	cout << "请输入一串数字,输入-1结束" << endl;
